@@ -1,0 +1,14 @@
+{% extends 'customer_service/base.html' %}
+{% block content %}
+<h2>Update Request Status</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+        <option value="pending">Pending</option>
+        <option value="in_progress">In Progress</option>
+        <option value="resolved">Resolved</option>
+    </select>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

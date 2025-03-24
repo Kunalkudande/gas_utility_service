@@ -1,0 +1,35 @@
+# Python/Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+*.sqlite3
+*.log
+
+# Django media and static files
+media/*
+!media/.gitkeep
+
+# Docker
+*.dockerignore
+Dockerfile.local
+docker-compose.local.yml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.bak
+*.swp
+*~

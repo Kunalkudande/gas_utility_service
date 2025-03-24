@@ -1,0 +1,24 @@
+{% extends 'customer_service/base.html' %}
+{% block content %}
+<h2>Your Service Requests</h2>
+<table border="1">
+    <tr>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Status</th>
+        <th>Submitted At</th>
+        <th>Resolved At</th>
+    </tr>
+    {% for request in requests %}
+    <tr>
+        <td>{{ request.request_type }}</td>
+        <td>{{ request.details }}</td>
+        <td>{{ request.status }}</td>
+        <td>{{ request.submitted_at }}</td>
+        <td>{{ request.resolved_at|default:"Not Resolved" }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5">No requests found.</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
